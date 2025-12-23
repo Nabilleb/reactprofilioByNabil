@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+#root {
+  width: 100%;
+  padding: 0;
+}
+
+.portfolio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.summary {
+  font-size: 1em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-info span {
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 60px 40px;
+  background: #f9f9f9;
+}
+
+.skills-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #667eea;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #667eea;
+  border: 2px solid #667eea;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 60px 40px;
+}
+
+.experience-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #667eea;
+  text-align: center;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  transform: translateX(5px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.experience-header h3 {
+  font-size: 1.3em;
+  color: #333;
+}
+
+.duration {
+  background: #667eea;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+.company {
+  font-weight: 600;
+  color: #764ba2;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Education Section */
+.education-section {
+  padding: 60px 40px;
+  background: #f9f9f9;
+}
+
+.education-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #667eea;
+  text-align: center;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.education-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border-top: 4px solid #764ba2;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.2);
+  transform: translateY(-5px);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.education-header h3 {
+  font-size: 1.3em;
+  color: #333;
+}
+
+.year {
+  background: #764ba2;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+.field {
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.school {
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 40px 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skills-section,
+  .experience-section,
+  .education-section {
+    padding: 40px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .contact-info {
+    gap: 15px;
+  }
+
+  .experience-header,
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .duration,
+  .year {
+    margin-top: 10px;
+  }
+}
