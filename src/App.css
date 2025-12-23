@@ -4,6 +4,69 @@
   box-sizing: border-box;
 }
 
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,6 +91,7 @@ body {
   color: white;
   padding: 60px 40px;
   text-align: center;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .profile-pic {
@@ -38,17 +102,25 @@ body {
   object-fit: cover;
   margin-bottom: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: bounce 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
 }
 
 .header h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .title {
   font-size: 1.3em;
   margin-bottom: 20px;
   opacity: 0.9;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .summary {
@@ -57,6 +129,7 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 .contact-info {
@@ -65,6 +138,7 @@ body {
   gap: 30px;
   margin-top: 30px;
   flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
 .contact-info span {
@@ -72,12 +146,19 @@ body {
   background: rgba(255, 255, 255, 0.2);
   padding: 10px 20px;
   border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-info span:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
 }
 
 /* Skills Section */
 .skills-section {
   padding: 60px 40px;
   background: #f9f9f9;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .skills-section h2 {
@@ -85,6 +166,7 @@ body {
   margin-bottom: 40px;
   color: #667eea;
   text-align: center;
+  animation: slideInLeft 0.6s ease-out;
 }
 
 .skills-grid {
@@ -103,18 +185,28 @@ body {
   border: 2px solid #667eea;
   transition: all 0.3s ease;
   cursor: pointer;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
 }
+
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(n+6) { animation-delay: 0.6s; }
 
 .skill-card:hover {
   background: #667eea;
   color: white;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
 }
 
 /* Experience Section */
 .experience-section {
   padding: 60px 40px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .experience-section h2 {
@@ -122,6 +214,7 @@ body {
   margin-bottom: 40px;
   color: #667eea;
   text-align: center;
+  animation: slideInRight 0.6s ease-out;
 }
 
 .experience-list {
@@ -136,11 +229,18 @@ body {
   border-radius: 10px;
   border-left: 5px solid #667eea;
   transition: all 0.3s ease;
+  animation: slideInLeft 0.6s ease-out;
+  animation-fill-mode: both;
 }
 
+.experience-card:nth-child(1) { animation-delay: 0.1s; }
+.experience-card:nth-child(2) { animation-delay: 0.3s; }
+.experience-card:nth-child(3) { animation-delay: 0.5s; }
+
 .experience-card:hover {
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
-  transform: translateX(5px);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+  transform: translateX(10px);
+  border-left-color: #764ba2;
 }
 
 .experience-header {
@@ -179,6 +279,7 @@ body {
 .education-section {
   padding: 60px 40px;
   background: #f9f9f9;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .education-section h2 {
@@ -186,6 +287,7 @@ body {
   margin-bottom: 40px;
   color: #667eea;
   text-align: center;
+  animation: slideInLeft 0.6s ease-out;
 }
 
 .education-list {
@@ -200,11 +302,16 @@ body {
   border-radius: 10px;
   border-top: 4px solid #764ba2;
   transition: all 0.3s ease;
+  animation: slideInRight 0.6s ease-out;
+  animation-fill-mode: both;
 }
 
+.education-card:nth-child(1) { animation-delay: 0.1s; }
+.education-card:nth-child(2) { animation-delay: 0.3s; }
+
 .education-card:hover {
-  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.2);
-  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(118, 75, 162, 0.3);
+  transform: translateY(-8px);
 }
 
 .education-header {
@@ -236,6 +343,64 @@ body {
 
 .school {
   color: #666;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 60px 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.projects-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #667eea;
+  text-align: center;
+  animation: slideInRight 0.6s ease-out;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 5px solid #764ba2;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.3s; }
+.project-card:nth-child(3) { animation-delay: 0.5s; }
+
+.project-card:hover {
+  box-shadow: 0 15px 30px rgba(118, 75, 162, 0.3);
+  transform: translateY(-10px);
+  border-left-color: #667eea;
+}
+
+.project-card h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.technologies {
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.6;
 }
 
 /* Footer */
