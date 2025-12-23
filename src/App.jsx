@@ -28,7 +28,9 @@ function App() {
       "PostgreSQL",
       "EJS",
       "PHP",
-      "Pandas"
+      "Pandas",
+      "MySQL",
+      "NoSQL"
     ],
     
     experience: [
